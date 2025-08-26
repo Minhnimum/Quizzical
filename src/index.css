@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Animation for rotating movement */
+@keyframes move {
+    0% {
+        transform: translate3d(0, 0, 1px) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+/* Main background container */
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #F5F7FB; /* Clean light background */
+    overflow: hidden;
+    z-index: 0; /* Keeps background behind all content */
+}
+
+body {
+    font-family: Karla, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Root container styling - perfectly centered */
+#root {
+    position: relative;
+    z-index: 1; /* Ensures root content appears above background */
+    width: 550px;
+    height: 550px;
+    background: none;
+    /* Remove the margin: 50% auto as flexbox handles centering */
+}
+
+/* Base ball styles */
+.ball {
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    animation: move linear infinite;
+}
+
+/* Light pastel colored balls */
+.ball:nth-child(1) {
+    background: #DEEBF8; /* Light blue */
+    top: 77%;
+    left: 88%;
+    animation-duration: 40s;
+    animation-delay: -3s;
+    transform-origin: 16vw -2vh;
+    box-shadow: 40vmin 0 0 #DEEBF8;
+}
+
+.ball:nth-child(2) {
+    background: #FFFAD1; /* Light cream */
+    top: 42%;
+    left: 2%;
+    animation-duration: 53s;
+    animation-delay: -29s;
+    transform-origin: -19vw 21vh;
+    box-shadow: -40vmin 0 0 #FFFAD1;
+}
+
+.ball:nth-child(3) {
+    background: #E3BBEE; /* Light purple */
+    top: 28%;
+    left: 18%;
+    animation-duration: 49s;
+    animation-delay: -8s;
+    transform-origin: -22vw 3vh;
+    box-shadow: 40vmin 0 0 #E3BBEE;
+}
+
+.ball:nth-child(4) {
+    background: #F34C7A; /* Bright pink */
+    top: 50%;
+    left: 79%;
+    animation-duration: 26s;
+    animation-delay: -21s;
+    transform-origin: -17vw -6vh;
+    box-shadow: 40vmin 0 0 #F34C7A;
+}
+
+.ball:nth-child(5) {
+    background: #72ABED; /* Light blue */
+    top: 46%;
+    left: 15%;
+    animation-duration: 36s;
+    animation-delay: -40s;
+    transform-origin: 4vw 0vh;
+    box-shadow: -40vmin 0 0 #72ABED;
+}
+
+.ball:nth-child(6) {
+    background: #FC5E62; /* Coral pink */
+    top: 77%;
+    left: 16%;
+    animation-duration: 31s;
+    animation-delay: -10s;
+    transform-origin: 18vw 4vh;
+    box-shadow: 40vmin 0 0 #FC5E62;
+}
+
+.ball:nth-child(7) {
+    background: #B8E6B8; /* Light green */
+    top: 22%;
+    left: 17%;
+    animation-duration: 55s;
+    animation-delay: -6s;
+    transform-origin: 1vw -23vh;
+    box-shadow: -40vmin 0 0 #B8E6B8;
+}
+
+.ball:nth-child(8) {
+    background: #FFD6A5; /* Light peach */
+    top: 41%;
+    left: 47%;
+    animation-duration: 43s;
+    animation-delay: -28s;
+    transform-origin: 25vw -3vh;
+    box-shadow: 40vmin 0 0 #FFD6A5;
+}
+
+div#root {
+  z-index: 1;
+  width: 550px;
+  height: 550px;
+  background-color: rgba(237, 246, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10%;
+}
+
+/* Start page styling */
+section > .start-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.start-page h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.start-page p {
+    font-size: 16px;
+    font-family: Inter, san-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.start-page button {
+  background-color: #4D5B9E;
+  height: 52px;
+  width: 193px;
+  margin-block: 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-family: Inter, san-serif;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.start-page > .questionCount {
+  background-color: #4D5B9E;
+  height: 52px;
+  width: 60px;
+  margin-block: 20px;
+  margin-left: 10px;
+  border: 2px solid oldlace;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-family: Inter, san-serif;
+  font-weight: 500;
+  border: none;
+  padding: 0 12px;
+}
+
+
+
