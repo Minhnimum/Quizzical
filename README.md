@@ -1,69 +1,51 @@
-# Quizzical
+# Quizzical 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Quizzical**, a fun and interactive quiz application built with React\! Test your knowledge on a wide variety of topics with a customizable number of questions.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live version of the application here:
+[https://quizzical-beryl.vercel.app/](https://quizzical-beryl.vercel.app/)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  - **Dynamic Questions**: Fetches new multiple-choice questions from the Open Trivia Database API for a fresh experience every time.
+  - **Customizable Quiz**: Choose the number of questions you want, from **5 to 20**.
+  - **Interactive UI**: Click to select your answers and get immediate feedback on your performance.
+  - **Score Tracking**: See your final score and the correct answers after completing the quiz.
+  - **Responsive Design**: Enjoy a seamless experience on both desktop and mobile devices.
+  - **HTML Entity Decoding**: Handles and decodes special characters (like `&quot;`) from the API response for clean, readable text.
+  - **CSS Animations**: Includes subtle animations for a polished look and feel. The text animations and effects were inspired by the techniques found in this article: [https://prismic.io/blog/css-text-animations](https://prismic.io/blog/css-text-animations).
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+This project was built using the following technologies:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  - **React**: A JavaScript library for building user interfaces.
+  - **useState & useEffect**: React hooks for managing state and side effects, such as data fetching.
+  - **Open Trivia Database API**: A free, public API that provides a wide range of quiz questions.
+      - **API Endpoint**: `https://opentdb.com/api.php?amount=<NUMBER>&type=multiple`
+  - **CSS**: For styling the components and creating the visual effects.
+  - **JavaScript/TypeScript**: The core programming languages used for the application logic.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💻 How to Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To run this project on your local machine, follow these steps:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd quizzical
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+5.  Open your browser and visit `http://localhost:3000`.
